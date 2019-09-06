@@ -1,8 +1,10 @@
 # CentOS 6 Ansible Test Image
 
-[![Docker Automated build](https://img.shields.io/docker/automated/geerlingguy/docker-centos6-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/geerlingguy/docker-centos6-ansible/)
+[![Build Status](https://travis-ci.org/mikev1963/docker-centos6-ansible.svg?branch=master)](https://travis-ci.org/mikev1963/docker-centos6-ansible)
 
 CentOS 6 Docker container for Ansible playbook and role testing.
+
+# This role was inspired by Jeff Geerling.  I added an ansible user for testing as a non-root account.
 
 ## How to Build
 
@@ -29,4 +31,4 @@ I use Docker to test my Ansible roles and playbooks on multiple OSes using CI to
 
 ## Author
 
-Created in 2016 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+Created in 2016 by Michael A. Ventarola

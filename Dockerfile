@@ -1,5 +1,5 @@
 FROM centos:6
-LABEL maintainer="Jeff Geerling"
+LABEL maintainer="Michael A. Ventarola"
 
 # Install Ansible and other requirements.
 RUN yum makecache fast \
@@ -34,6 +34,7 @@ RUN set -xe \
   && groupadd -r ${ANSIBLE_USER} \
   && useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} \
   && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
+  && echo "ansible:password" | chpasswd \
   && sed -i "/%${SUDO_GROUP}.*NOPASSWD/s/^#\s*//g" /etc/sudoers
 
 CMD ["/sbin/init"]
